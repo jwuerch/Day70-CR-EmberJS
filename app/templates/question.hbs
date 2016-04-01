@@ -6,6 +6,12 @@
   {{model.note}}
 </div>
 
+{{#each model.answers as |answer|}}
+  {{answer.content}}
+  {{answer.author}}
+{{/each}}
+{{answer-add saveAnswer="saveAnswer" question=model}}
+
 
 <br>
 {{question-update question=model updateQuestion="updateQuestion"}}
