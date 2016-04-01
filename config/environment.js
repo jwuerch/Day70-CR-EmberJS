@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'day65-cr-message-board',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://cr-message-board.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
