@@ -1,0 +1,22 @@
+#note {
+  height: 150px;
+  width:250px;
+}
+
+#author {
+  width:250px;
+}
+
+#title {
+  width:250px;
+  height:100px;
+}
+
+#note, #author, #title {
+  padding:0.4em;
+
+}
+
+.underline {
+  text-decoration: underline;
+}

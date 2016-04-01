@@ -1,17 +1,17 @@
 <form>
-  <div class="form-group">
-    <label for="title">What's your question?</label>
-    {{input value=title id="title"}}
-  </div>
-
-  <div class="form-group">
-    <label for="author">Who's asking?</label>
-    {{input value=author id="author"}}
-  </div>
-
-  <div class="form-group">
-    <label for="note">Anything else you'd like to add?</label>
-    {{input value=note id="note"}}
-  </div>
+  <label for="author">Who's asking?</label>
+  {{textarea value=author id="author" type="text"}}
+  <br>
+  <br>
+  <label for="title">What's your question?</label>
+  <br>
+  {{textarea value=title id="title" type="text"}}
+  <br>
+  <br>
+  <label for="note">Additional notes</label>
+  <br>
+  {{textarea value=note id="note" type="text"}}
+  <br>
+  <br>
   <button {{action 'saveQuestion'}}>Ask!</button>
 </form>
