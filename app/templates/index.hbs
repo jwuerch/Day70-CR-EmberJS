@@ -7,8 +7,8 @@
 <br>
 {{#each model.questions as |question|}}
     <h4>{{question.title}}</h4>
-      <h5>Written by {{question.author}}</h5>
-      {{#link-to 'question' question.id}}Answers{{/link-to}}
+      <h6>Asked by {{question.author}}</h6>
+      {{#link-to 'question' question.id}}Answer{{/link-to}}
     <hr>
     <br>
 {{/each}}
