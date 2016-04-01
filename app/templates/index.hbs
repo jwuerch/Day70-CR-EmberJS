@@ -4,11 +4,7 @@
         <div>
           <div class="col-sm-1">
             <br>
-            <div class="upvote-box" style="width:30px;top:0px;position:relative;text-align:center;">
-              <i style="margin:0 auto;"{{action 'upvote' }} class="fa fa-arrow-up"></i>
-              <p style="margin-top:5.5px;font-size:16px;"> {{question.rank}}</p>
-              <i {{action 'downvote'}}class="fa fa-arrow-down"></i>
-            </div>
+            {{question-vote question=question upvote="upvote"}}
           </div>
           <div class="col-sm-11">
             <h3>{{question.title}}</h3>
