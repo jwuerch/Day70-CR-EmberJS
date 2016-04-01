@@ -1,12 +1,25 @@
 <div class="row">
   <div class="col-sm-8">
-    {{#each model.questions as |question|}}
-    <h4>{{question.title}}</h4>
-    <h6>Asked by {{question.author}}</h6>
-    {{#link-to 'question' question.id}}Answer{{/link-to}}
-    <hr>
-    <br>
-    {{/each}}
+      {{#each model.questions as |question|}}
+        <div>
+          <div class="col-sm-1">
+            <br>
+            <div class="upvote-box" style="width:30px;top:0px;position:relative;text-align:center;">
+              <i style="margin:0 auto;"{{action 'upvote' }} class="fa fa-arrow-up"></i>
+              <p style="margin-top:5.5px;font-size:16px;"> {{question.rank}}</p>
+              <i {{action 'downvote'}}class="fa fa-arrow-down"></i>
+            </div>
+          </div>
+          <div class="col-sm-11">
+            <h3>{{question.title}}</h3>
+            <h5>Asked by {{question.author}}</h5>
+            <p>{{question.answers.length}} answer(s)</p>
+            {{#link-to 'question' question.id}}View{{/link-to}}
+            <br>
+            <hr>
+          </div>
+        </div>
+      {{/each}}
   </div>
   <div class="col-sm-3 col-sm-offset-1">
     <h4 class="text-primary underline">Ask a question</h4>
