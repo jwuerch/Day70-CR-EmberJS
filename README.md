@@ -1,7 +1,6 @@
 # Day65-cr-message-board
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This Ember application allows you to create questions and have other users answer them. You can update, delete and add questions with the answer to the questions. You can also add answers. The upvote function is curently not working.
 
 ## Prerequisites
 
@@ -15,7 +14,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/jwuerch/Day65-CR-Message-Board.git`
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -41,7 +40,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+All you need to deploy is type in ember -s in the terminal and then visit localhost:4200. The app is currently not hosted.
 
 ## Further Reading / Useful Links
 
@@ -51,3 +50,7 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+##License
+
+This software is licensed under the MIT license.
+Copyright (c) 2016 _**Jason Wuerch**_.
