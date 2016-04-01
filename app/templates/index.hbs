@@ -3,7 +3,12 @@
 
 {{question-add saveQuestion="saveQuestion"}}
 <br>
-<h4>Current questions</h4>
+<h3>Current questions</h3>
+<br>
 {{#each model.questions as |question|}}
-    <li>{{question.title}}</li>
+    <h4>{{question.title}}</h4>
+      <h5>Written by {{question.author}}</h5>
+      {{#link-to 'question' question.id}}Answers{{/link-to}}
+    <hr>
+    <br>
 {{/each}}
