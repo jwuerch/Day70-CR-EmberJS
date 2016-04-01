@@ -15,8 +15,9 @@
       <label for="note">Notes</label>
       {{input value=note id="note"}}
     </div>
-    <button {{action 'updateQuestion' question}}>Update!</button>
+    <button {{action 'updateQuestion' question}}>Update</button>
+    <button {{action 'cancelUpdate'}}>Cancel</button>
   </form>
 {{else}}
-  <button {{action 'showUpdateQuestionForm'}}>Update question</button>
+  <a href="#" {{action 'showUpdateQuestionForm'}}>Update question</a>
 {{/if}}

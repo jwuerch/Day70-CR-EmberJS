@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showUpdateQuestionForm() {
       this.set('updateQuestionForm', true);
     },
+    cancelUpdate() {
+      this.set('updateQuestionForm', false);
+    },
     updateQuestion(question) {
       var params = {
         title: this.get('title') ? this.get('title') : "",

@@ -4,16 +4,22 @@
   <br>
   <h5>Additional notes:</h5>
   {{model.note}}
+  <br>
+  <br>
+  <div class="btn-group">
+    <a href="/"{{action 'deleteQuestion' model}}>Delete question</a>
+    {{question-update question=model updateQuestion="updateQuestion"}}
+  </div>
 </div>
 
 {{#each model.answers as |answer|}}
+  <h5>Answered by: {{answer.author}}</h5>
   {{answer.content}}
-  {{answer.author}}
+  <br>
+  <hr>
 {{/each}}
+<br>
+
 {{answer-add saveAnswer="saveAnswer" question=model}}
-
-
 <br>
-{{question-update question=model updateQuestion="updateQuestion"}}
 <br>
-<button {{action 'deleteQuestion' model}}>Delete question</button>

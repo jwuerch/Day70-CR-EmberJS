@@ -1,4 +1,4 @@
-{{#if askAnswerForm}}
+
 <form>
   <div class="form-group">
     <label for="author">Name</label>
@@ -10,6 +10,3 @@
   </div>
   <button {{action 'saveAnswer'}}>Answer</button>
 </form>
-{{else}}
-<button {{action 'showAskAnswerForm'}}>Answer question</button>
-{{/if}}
