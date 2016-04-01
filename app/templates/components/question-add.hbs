@@ -1,0 +1,19 @@
+<h5>Submit a new question.</h5>
+
+<form>
+  <div class="form-group">
+    <label for="title">What's your question?</label>
+    {{input value=title id="title" type="text"}}
+  </div>
+
+  <div class="form-group">
+    <label for="author">Who's asking?</label>
+    {{input value=author id="author" type="text"}}
+  </div>
+
+  <div class="form-group">
+    <label for="note">Anything else you'd like to add?</label>
+    {{input value=note id="note" type="notes"}}
+  </div>
+  <button {{action 'saveQuestion'}}>Ask!</button>
+</form>
