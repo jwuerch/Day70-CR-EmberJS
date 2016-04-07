@@ -7,13 +7,13 @@ export default Ember.Component.extend({
       this.set('askAnswerForm', true);
     },
     saveAnswer() {
-      var params = {
+        var params = {
         author: this.get('author') ? this.get('author') : "",
         content: this.get('content') ? this.get('content') : "",
         question: this.get('question') ? this.get('question') : "",
       };
       this.set('askAnswerForm', false);
       this.sendAction('saveAnswer', params)
-    };
+    }
   }
 });
