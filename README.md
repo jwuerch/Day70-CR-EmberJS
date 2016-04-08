@@ -1,6 +1,6 @@
 # Day65-cr-message-board
 
-This Ember application allows you to create questions and have other users answer them. You can update, delete and add questions with the answer to the questions. You can also add answers. The upvote function is curently not working.
+This Ember application allows you to create questions and have other users answer them. You can update, delete and add questions with the answer to the questions. You can also add answers. The upvote function is currently not working.
 
 ## Prerequisites
 
