@@ -20,6 +20,10 @@
   <h5>Answered by: {{answer.author}}</h5>
   {{answer.content}}
   <br>
+  {{#if session.isAuthenticated}}
+    <a href="#" {{action 'deleteAnswer' answer}}>Delete answer</a>
+  {{/if}}
+  <br>
   <hr>
 {{/each}}
 <br>
