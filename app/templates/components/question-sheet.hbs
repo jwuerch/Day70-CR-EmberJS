@@ -1,0 +1,19 @@
+<div class="col-sm-8">
+    {{#each questions as |question|}}
+      <div>
+        <div class="col-sm-1">
+          <br>
+          {{question-vote upVote="upVote" downVote="downVote" question=question}}
+        </div>
+        <div class="col-sm-11">
+          <p><span class="question-big">{{question.title}}</span> <span style="position:relative;top:-2px;color:orange;">{{hot-topic question}}</span></p>
+
+          <h5>Asked by {{question.author}}</h5>
+          <p>{{question.answers.length}} answer(s)</p>
+          {{#link-to 'question' question.id}}View{{/link-to}}
+          <br>
+          <hr>
+        </div>
+      </div>
+    {{/each}}
+</div>
