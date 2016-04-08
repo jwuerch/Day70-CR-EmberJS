@@ -1,11 +1,13 @@
 <div class="row">
   {{question-sheet questions=model.questions upVote="upVote" downVote="downVote" saveQuestion="saveQuestion"}}
 
-  <div class="col-sm-3 col-sm-offset-1">
-    <h4 class="text-primary underline">Ask a question</h4>
-    <br>
-    {{question-add saveQuestion="saveQuestion"}}
-  </div>
-
-  {{currentDate 'LL'}}
+  {{#if session.isAuthenticated}}
+    <div class="col-sm-3 col-sm-offset-1">
+      <h4 class="text-primary underline">Ask a question</h4>
+      <br>
+      {{question-add saveQuestion="saveQuestion"}}
+    </div>
+  {{else}}
+  You need to {{#link-to 'sign-in'}}sign-in{{/link-to}} to ask a question. Don't have an account? {{#link-to 'sign-up'}}Register{{/link-to}} for free!
+  {{/if}}
 </div>

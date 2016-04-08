@@ -16,7 +16,7 @@ export default Ember.Route.extend({
         });
         Ember.RSVP.all(answer_deletions).then(function() {
           return question.destroyRecord();
-        })
+        });
         this.transitionTo('index');
       }
     },
@@ -52,9 +52,10 @@ export default Ember.Route.extend({
         this.get('favoriteList').add(question);
       } else {
         console.log('already has');
+        console.log(this.get('favoriteList').get('questions'));
       }
     },
-    isComplete(question) {
+    isComplete() {
 
     }
   }
