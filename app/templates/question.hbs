@@ -11,6 +11,11 @@
     <a href="/"{{action 'deleteQuestion' model}}>Delete question</a>
     {{question-update question=model updateQuestion="updateQuestion"}}
   </div>
+  <br>
+  <br>
+  <div class="star-rating">
+    Add to favorites <span class="fa fa-star-o" data-rating="1"></span>
+  </div>
   {{else}}
     {{#link-to 'sign-in'}}Sign-in{{/link-to}} to view additional options.
   {{/if}}
