@@ -1,8 +1,12 @@
 <h3>Favorite list</h3>
 <br>
-{{#each favoriteList.questions as |question index|}}
-  <p class="favorite-list-question">{{question.title}}  <a href="#" {{action 'removeFromFavorites' index}}>Remove</a></p>
-  <br>
-{{/each}}
+{{#if favoriteList.questions.length}}
+  {{#each favoriteList.questions as |question index|}}
+    <p class="favorite-list-question">{{question.title}}  <a href="#" {{action 'removeFromFavorites' index}}>Remove</a></p>
+    <br>
+  {{/each}}
+{{else}}
+  <p>Your favorite list is currently empty. {{#link-to 'index'}}Add questions{{/link-to}} to your favorite list.</p>
+{{/if}}
 
 <button class="btn btn-primary" {{action 'clearFavorites'}}>Clear favorites</button>
