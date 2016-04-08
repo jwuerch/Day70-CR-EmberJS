@@ -1,12 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  favoriteList: [],
+  favorites: [],
 
   add(favorite) {
-    this.get('favoriteList').pushObject(favorite);
+    this.get('favorites').pushObject(favorite);
   },
   delete(favorite) {
-    this.get('favoriteList').removeObject(favorite);
+    this.get('favorites').removeObject(favorite);
+  },
+  empty() {
+    this.get('favorites').clear();
   }
 });

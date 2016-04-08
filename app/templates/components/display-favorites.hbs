@@ -1,1 +1,5 @@
-{{yield}}
+Favorite List:
+<br>
+{{#each favoriteList.favorites as |favorite|}}
+  {{favorite.title}}
+{{/each}}
