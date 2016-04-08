@@ -21,6 +21,7 @@ You will need the following things properly installed on your computer.
 * `ember install emberfire`
 * `ember install ember-bootstrap`
 * `ember install ember-cli-font-awesome`
+* `ember install torii`
 
 ## Running / Development
 
