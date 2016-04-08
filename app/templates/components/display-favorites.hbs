@@ -2,7 +2,7 @@
 <br>
 {{#if favoriteList.questions.length}}
   {{#each favoriteList.questions as |question index|}}
-    <p class="favorite-list-question">{{question.title}}  <a href="#" {{action 'removeFromFavorites' index}}>Remove</a></p>
+    <p class="favorite-list-question">{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}  <a href="#" {{action 'removeFromFavorites' index}}>Remove</a></p>
     <br>
   {{/each}}
 {{else}}
