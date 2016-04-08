@@ -34,3 +34,7 @@
 .favorite-list-question:hover {
   color:#337ab7;
 }
+
+.question-big {
+  font-size: 24px;
+}

@@ -42,7 +42,14 @@ export default Ember.Route.extend({
       this.transitionTo('question', answer.get('question'));
     },
     addToFavorite(question) {
-      this.get('favoriteList').add(question);
+      if (this.get('favoriteList').get('questions').indexOf(question) === -1) {
+        this.get('favoriteList').add(question);
+      } else {
+        console.log('already has');
+      }
+    },
+    isComplete(question) {
+
     }
   }
 });

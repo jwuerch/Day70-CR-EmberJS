@@ -14,7 +14,10 @@
   <br>
   <br>
   <div class="star-rating">
-    Add to favorites <button {{action 'addToFavorite' model}} class="fa fa-star-o" data-rating="1"></button>
+    Add to favorites
+    <button {{action 'addToFavorite' model}} class="fa fa-star-o" data-rating="1">
+
+    </button>
   </div>
   {{else}}
     {{#link-to 'sign-in'}}Sign-in{{/link-to}} to view additional options.
