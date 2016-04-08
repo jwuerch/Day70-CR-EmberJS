@@ -1,5 +1,8 @@
-Favorite List:
+<h3>Favorite list</h3>
 <br>
-{{#each favoriteList.questions as |question|}}
-  {{question.title}}
+{{#each favoriteList.questions as |question index|}}
+  <p class="favorite-list-question">{{question.title}}  <a href="#" {{action 'removeFromFavorites' index}}>Remove</a></p>
+  <br>
 {{/each}}
+
+<button class="btn btn-primary" {{action 'clearFavorites'}}>Clear favorites</button>

@@ -6,8 +6,8 @@ export default Ember.Service.extend({
   add(question) {
     this.get('questions').pushObject(question);
   },
-  remove(question) {
-    this.get('questions').removeObject(question);
+  remove(index) {
+    this.get('questions').removeAt(index);
   },
   empty() {
     this.get('questions').clear();
