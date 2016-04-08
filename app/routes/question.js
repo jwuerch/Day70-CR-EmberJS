@@ -39,11 +39,13 @@ export default Ember.Route.extend({
       this.transitionTo('question', params.question);
     },
     deleteAnswer(answer) {
-      var question = answer.get('question');
-      answer.destroyRecord().then(function() {
-        question.save();
-      });
-      this.transitionTo('question', answer.get('question'));
+      if(confirm("Are you sure you want to delete this answer?")) {
+        var question = answer.get('question');
+        answer.destroyRecord().then(function() {
+          question.save();
+        });
+        this.transitionTo('question', answer.get('question'));
+      }
     },
     addToFavorite(question) {
       if (this.get('favoriteList').get('questions').indexOf(question) === -1) {
