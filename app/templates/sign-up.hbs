@@ -7,15 +7,20 @@
       value=email
       placeholder='email'
   }}
+  <br>
   {{input
       type='password'
       class='form-control'
       value=password
       placeholder='password'
   }}
+  <br>
 <button
       class='btn btn-default'
       {{action 'signUp'}}
   >
       {{fa-icon 'user-plus'}} Sign Up
 </button>
+<br>
+<br>
+<p>Already have an account? Go ahead and {{#link-to 'sign-in'}}sign-in{{/link-to}}.</p>
