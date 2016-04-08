@@ -28,4 +28,9 @@
 
 .favorite-list-question {
   font-size:16px;
+  color:black;
+}
+
+.favorite-list-question:hover {
+  color:#337ab7;
 }
