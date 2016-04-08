@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
       }).then(() => {
         controller.set('email', null);
         controller.set('password', null);
-        controller.transitionToRoute('welcome');
+        this.transitionToRoute('/');
       }, (error) => {
         console.log(error);
       });

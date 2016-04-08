@@ -6,10 +6,14 @@
   {{model.note}}
   <br>
   <br>
+  {{#if session.isAuthenticated}}
   <div class="btn-group">
     <a href="/"{{action 'deleteQuestion' model}}>Delete question</a>
     {{question-update question=model updateQuestion="updateQuestion"}}
   </div>
+  {{else}}
+    {{#link-to 'sign-in'}}Sign-in{{/link-to}} to view additional options.
+  {{/if}}
 </div>
 
 {{#each model.answers as |answer|}}
