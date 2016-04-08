@@ -5,5 +5,6 @@ export default DS.Model.extend({
   author: DS.attr(),
   note: DS.attr(),
   rank: DS.attr(),
+  category: DS.attr(),
   answers: DS.hasMany('answer', { async: true})
 });

@@ -11,14 +11,21 @@ export default Ember.Route.extend({
     saveQuestion(params) {
       var newQuestion = this.store.createRecord('question', params);
       newQuestion.save();
-    }
-  },
-  upvote(question, params) {
-    Object.keys(params).forEach(function(key) {
-      if(params[key]!==undefined) {
-        question.set(key, params[key]);
+    },
+    upVote(question) {
+      var currentRank = question.get('rank');
+      currentRank++;
+      question.set('rank', currentRank);
+      question.save();
+    },
+    downVote(question) {
+      if (question.get('rank') !== 0) {
+        var currentRank = question.get('rank');
+        currentRank--;
+        question.set('rank', currentRank);
+        question.save();
       }
-    });
-    question.save();
+    }
   }
+
 });

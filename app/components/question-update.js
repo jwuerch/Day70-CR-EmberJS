@@ -16,8 +16,8 @@ export default Ember.Component.extend({
         note: this.get('note'),
         answers: this.get('answers'),
         rank: this.get('rank'),
+        category: this.get('category')
       };
-      this.set('updateQuestionForm', false);
       this.sendAction('updateQuestion', question, params);
     }
   }
