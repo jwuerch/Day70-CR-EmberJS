@@ -14,7 +14,7 @@
   <br>
   <br>
   <div class="star-rating">
-    Add to favorites <span class="fa fa-star-o" data-rating="1"></span>
+    Add to favorites <span {{action 'addToFavorite' question}} class="fa fa-star-o" data-rating="1"></span>
   </div>
   {{else}}
     {{#link-to 'sign-in'}}Sign-in{{/link-to}} to view additional options.
