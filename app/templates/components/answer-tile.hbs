@@ -1,0 +1,9 @@
+{{#each answers as |answer|}}
+  <h5>{{fullWord}} {{answer.author}}</h5>
+  {{answer.content}}
+
+  <br>
+    <a href="#" {{action 'deleteAnswer' answer}}>Delete answer</a>
+  <br>
+  <hr>
+{{/each}}

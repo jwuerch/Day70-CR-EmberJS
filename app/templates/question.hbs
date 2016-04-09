@@ -23,16 +23,8 @@
   {{/if}}
 </div>
 
-{{#each model.answers as |answer|}}
-  <h5>Answered by: {{answer.author}}</h5>
-  {{answer.content}}
-  <br>
-  {{#if session.isAuthenticated}}
-    <a href="#" {{action 'deleteAnswer' answer}}>Delete answer</a>
-  {{/if}}
-  <br>
-  <hr>
-{{/each}}
+  {{answer-tile answers=model.answers deleteAnswer="deleteAnswer" answer=answer}}
+
 <br>
 
 {{answer-add saveAnswer="saveAnswer" question=model}}
